@@ -1,0 +1,114 @@
+/* Google Fonts */
+
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*      
+ 
+    font-family: 'Press Start 2P', cursive;
+
+*/
+
+/* Google Fonts */
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+.start-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    background-color: black;
+    width: 100%;
+    height: 355px;
+    text-align: center;
+    border-radius: 30px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.start-text{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.start-button{
+    margin-top: 30px;
+    border: none;
+    background: black;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+}
+
+.flex{
+    display: flex;
+}
+
+.flicker{
+    animation-name: flicking;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes flicking{
+    0%{ opacity: 1.0; }
+    50%{ opacity: 0.0; }
+    100%{ opacity: 1.0; }
+}
+
+.option{
+    padding: 50px;
+    font-size: 48px;
+    cursor: pointer;
+    margin-top: 90px;
+    margin-right: 20px;
+}
+
+.option:hover{
+    border: 3px dashed white;
+}
+
+.option p{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.board-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0px;
+    border: 1px solid white;
+    width: 500px;
+    height: 700px;
+}
+
+.play{
+    margin: 0px;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.play div{
+    font-size: 90px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+}
