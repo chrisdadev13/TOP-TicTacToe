@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Stylesheet CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="start-container">
+        <h1 class="start-text"> Tic Tac Toe </h1>
+        <button id="press-to-start" class="start-button flicker"> Press to start </button>
+    </div>
+    <div class="play-option start-container" style="display: none;">
+        <h1 class="start-text"> Select an opponent: </h1>
+        <div class="flex">
+            <div id="robot" class="option">
+                <span class="fas fa-robot"></span>
+                <p> Robot </p>
+            </div>       
+            <div id="human" class="option">
+                <span class="fas fa-user"></span>
+                <p> Human </p>
+            </div>
+        </div>
+    </div>
+    <div class="board-container" style="display:none">
+        <div class="board">
+            <div id="1" class="play"> <div> X </div> </div>   
+            <div id="2" class="play"></div> 
+            <div id="3" class="play"></div> 
+            <div id="4" class="play"></div> 
+            <div id="5" class="play"></div> 
+            <div id="6" class="play"></div> 
+            <div id="7" class="play"></div> 
+            <div id="8" class="play"></div>
+            <div id="9" class="play"></div>
+        </div>
+    </div>
+    <!-- Javascript -->
+   <script src="main.js"></script> 
+</body>
+</html>
