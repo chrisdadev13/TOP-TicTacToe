@@ -80,9 +80,17 @@ const gameBoard = (() => {
 
   const rowWinner = (arr) => {
     for(let i = 0; i < arr.length; i++){
-      if(arr[i] == arr[i + 1] && arr[i + 1] == arr[i + 2]){
+      if(arr[0] == arr[0 + 1] && arr[0 + 1] == arr[0 + 2]){
         winner = true;
-        whoWin.push(arr[i], arr[i + 1], arr[i + 2]);
+        whoWin.push(arr[0], arr[0 + 1], arr[0 + 2]);
+      }
+      else if(arr[3] == arr[3 + 1] && arr[3 + 1] == arr[3 + 2]){
+        winner = true;
+        whoWin.push(arr[3], arr[3 + 1], arr[3 + 2]);
+      }
+      else if(arr[6] == arr[6 + 1] && arr[6 + 1] == arr[6 + 2]){
+        winner = true;
+        whoWin.push(arr[6], arr[6 + 1], arr[6 + 2]);
       }
       else{
         continue;
@@ -114,6 +122,15 @@ const gameBoard = (() => {
     }
   }
 
+
+  // Tie, check the elements in the array and if winner is false and the elements in every element in the array are "X" or "O"
+
+  const tie = (arr) => {
+    if(winner == false && arr.every(elem => elem == "X" || elem == "O")){
+      alert("Is a tie");
+    }
+  }
+
   //Before put the respective player mark in the DOM, ask if the tile clicked is the same in the array, change the array and add the mark in DOM
   const displayController = (() => {
     tiles.forEach((tile) => {
@@ -142,10 +159,12 @@ const gameBoard = (() => {
             playerTwo.turn = false;
           }
         }
+
         rowWinner(boardArr);
         columnWinner(boardArr);
         firstDiagonal(boardArr);
         secondDiagonal(boardArr);
+        tie(boardArr);
 
         })
       })
