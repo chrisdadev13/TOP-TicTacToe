@@ -18,7 +18,7 @@ const gameBoard = (() => {
   let playerTwo = Player("Two", "O", false);
 
   let boardArr = [];
-  
+  let oldArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];  
   //Full the array with HTML tiles value so if player selection == tiles value, array change:
   let tiles = document.querySelectorAll("div.board > div.play");
   tiles.forEach((tile) => {
@@ -52,29 +52,17 @@ const gameBoard = (() => {
         continue;
       }
     }
-    if(winner == true && whoWin[0] == "X"){
-      alert(`We have a winner, congratulations player ${playerOne.name}`);
-    }
-    else if(winner == true && whoWin[0] == "O"){
-      alert(`We have a winner, congratulations player ${playerTwo.name}`);
-    }
   }
 
   const secondDiagonal = (arr) => {
-    for(let i = 2; i < arr.length; i++){
-      if(arr[i] == arr[i + 2] && arr[i + 2] == arr[i + 4]){
+    for(let i = 0; i < arr.length; i++){
+      if(arr[2] == arr[2 + 2] && arr[2 + 2] == arr[2 + 4]){
         winner = true;
-        whoWin.push(arr[i], arr[i + 2], arr[i + 4]);
+        whoWin.push(arr[2], arr[2 + 2], arr[2 + 4]);
       }
       else{
         continue;
       }
-    }
-    if(winner == true && whoWin[0] == "X"){
-      alert(`We have a winner, congratulations player ${playerOne.name}`);
-    }
-    else if(winner == true && whoWin[0] == "O"){
-      alert(`We have a winner, congratulations player ${playerTwo.name}`);
     }
   }
 
@@ -96,12 +84,6 @@ const gameBoard = (() => {
         continue;
       }
      }
-    if(winner == true && whoWin[0] == "X"){
-      alert(`We have a winner, congratulations player ${playerOne.name}`);
-    }
-    else if(winner == true && whoWin[0] == "O"){
-      alert(`We have a winner, congratulations player ${playerTwo.name}`);
-    }
   }
 
   const columnWinner = (arr) => {
@@ -114,15 +96,29 @@ const gameBoard = (() => {
         continue;
       }
     }
-    if(winner == true && whoWin[0] == "X"){
-      alert(`We have a winner, congratulations player ${playerOne.name}`);
-    }
-    else if(winner == true && whoWin[0] == "O"){
-      alert(`We have a winner`)
-    }
   }
 
+  //Show winner and restart button
+  let modal = document.querySelector(".winner-container");
+  let restartBtn = document.querySelector("#press-to-restart");
+  
+  restartBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    window.location.reload();
+  })
 
+  let winnerName = document.querySelector("#winner");
+
+  const declareWinner = () => {
+    if(winner == true && whoWin[0] == "X"){
+      modal.style.display = "";
+      winnerName.textContent = `Player: ${playerOne.name}`;
+    }
+    else if(winner == true && whoWin[0] == "O"){
+      modal.style.display = "";
+      winnerName.textContent = `Player: ${playerTwo.name}`;
+    }
+  } 
   // Tie, check the elements in the array and if winner is false and the elements in every element in the array are "X" or "O"
 
   const tie = (arr) => {
@@ -153,6 +149,7 @@ const gameBoard = (() => {
             console.log(boardArr);
   
             div.textContent = playerTwo.sign;
+            div.style.color = "#d63d36";
             tile.appendChild(div);
 
             playerOne.turn = true;
@@ -165,7 +162,8 @@ const gameBoard = (() => {
         firstDiagonal(boardArr);
         secondDiagonal(boardArr);
         tie(boardArr);
-
+        declareWinner();
+        
         })
       })
     })();
