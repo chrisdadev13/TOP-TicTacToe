@@ -9,4 +9,4 @@ In future I plan to add the next features:
 
 > Score
 
-> Advamced IA
+> Advanced IA
