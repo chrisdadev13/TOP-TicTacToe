@@ -28,6 +28,10 @@
         </div>
     </div>
     <div class="board-container" style="display:none">
+        <div class="flex">
+            <p class="start-text bloq">Player One: X </p>
+            <p class="start-text bloq">Player Two: O </p>
+        </div>
         <div class="board">
             <div id="1" class="play"></div>   
             <div id="2" class="play"></div> 
@@ -38,6 +42,13 @@
             <div id="7" class="play"></div> 
             <div id="8" class="play"></div>
             <div id="9" class="play"></div>
+        </div>
+    </div>
+    <div class="winner-container" style="display: none;">
+        <div class="modal-content">
+            <h1 class="start-text"> CONGRATULATIONS </h1>
+            <p id="winner" class="start-text">  </p>
+            <button id="press-to-restart" class="start-button flicker restart"> Press to start </button>
         </div>
     </div>
     <!-- Javascript -->
