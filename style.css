@@ -1,10 +1,10 @@
 /* Google Fonts */
 
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/*      
- 
-    font-family: 'Press Start 2P', cursive;
+/*
+
+font-family: 'Press Start 2P', cursive;
 
 */
 
@@ -12,136 +12,153 @@
 
 
 *, *::before, *::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #222222;
-    color: white;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background-color: #222222;
+color: white;
 }
 
 .start-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
-    background-color: #222222;
-    width: 100%;
-    height: 355px;
-    text-align: center;
-    border-radius: 30px;
-    font-family: 'Press Start 2P', cursive;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 10%;
+background-color: #222222;
+width: 100%;
+height: 355px;
+text-align: center;
+border-radius: 30px;
+font-family: 'Press Start 2P', cursive;
 }
 
 .start-text{
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
+text-align: center;
+font-family: 'Press Start 2P', cursive;
 }
 
 .start-button{
-    margin-top: 30px;
-    border: none;
-    background-color: #222222;
-    font-family: 'Press Start 2P', cursive;
-    cursor: pointer;
+margin-top: 30px;
+border: none;
+background-color: #222222;
+font-family: 'Press Start 2P', cursive;
+cursor: pointer;
 }
 
 .flex{
-    display: flex;
+display: flex;
 }
 
 .flicker{
-    animation-name: flicking;
-    animation-duration: 0.7s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+animation-name: flicking;
+animation-duration: 0.7s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
 }
 
 @-moz-keyframes flicking{
-    0%{ opacity: 1.0; }
-    50%{ opacity: 0.0; }
-    100%{ opacity: 1.0; }
+0%{ opacity: 1.0; }
+50%{ opacity: 0.0; }
+100%{ opacity: 1.0; }
 }
 
 .option{
-    padding: 50px;
-    font-size: 48px;
-    cursor: pointer;
-    margin-top: 90px;
-    margin-right: 20px;
+padding: 50px;
+font-size: 48px;
+cursor: pointer;
+margin-top: 90px;
+margin-right: 20px;
 }
 
 .option:hover{
-    border: 3px dashed white;
+border: 3px dashed white;
 }
 
 .option p{
-    margin-top: 20px;
-    font-size: 18px;
+margin-top: 20px;
+font-size: 18px;
 }
 
 .board-container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 150px;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+margin-top: 150px;
 }
 
 .board{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 0px;
-    border: 1px solid white;
-    width: 500px;
-    height: 700px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-gap: 0px;
+border: 1px solid white;
+width: 500px;
+height: 700px;
 }
 
 .play{
-    margin: 0px;
-    padding: 30px;
-    width: 100%;
-    height: auto;
-    border: 1px solid white;
-    text-align: center;
-    cursor: pointer;
+margin: 0px;
+padding: 30px;
+width: 100%;
+height: auto;
+border: 1px solid white;
+text-align: center;
+cursor: pointer;
+font-size: 120px;
+font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .play div{
-    font-size: 60px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-top: 40px;
+font-size: 60px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-top: 40px;
 }
 
 #winner{
-    margin-top: 50px;
+margin-top: 50px;
 }
 
 .winner-container{
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(255, 255, 255, 0.5); /* Black w/ opacity */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(255, 255, 255, 0.5); /* Black w/ opacity */
 }
 
 .modal-content{
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+margin: 15% auto; /* 15% from the top and centered */
+padding: 20px;
+border: 1px solid #888;
+width: 80%; /* Could be more or less, depending on screen size */
 }
 
 .restart{
-    margin-top: 70px;
-    margin-left: 650px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 10%;
+background-color: #222222;
+width: 100%;
+/*height: 355px;*/
+text-align: center;
+border-radius: 30px;
+font-family: 'Press Start 2P', cursive;
+cursor: pointer;
+border: none;
 }
 
 .bloq{
-    margin: 0 20px;
+margin: 0 20px;
+}
+
+.get-player-name-title{
+margin-top: 30px;
 }
