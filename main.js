@@ -166,9 +166,7 @@ class Main{
     let boardDOM = document.querySelectorAll("div.board > div.play");
     let boardArr = Main.createBoardArr();
     let playerOne = Main.playerOne();
-    document.querySelector("#player-one").textContent = playerOne.name + " X";
     let playerTwo = Main.playerTwo();
-    document.querySelector("#player-two").textContent = playerTwo.name + " O";
     let winner = false;
 
     boardDOM.forEach((tile) => {
@@ -228,4 +226,4 @@ class Main{
   }
 }
 
-Main.game();
+Main.TicTacToe();
