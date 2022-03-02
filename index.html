@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Stylesheet CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Stylesheet CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <div class="start-container">
-        <h1 class="start-text"> Tic Tac Toe </h1>
-        <button id="press-to-start" class="start-button flicker"> Press to start </button>
+  <div class="start-container">
+    <h1 class="start-text"> Tic Tac Toe </h1>
+    <button id="press-to-start" class="start-button flicker"> Press to start </button>
+  </div>
+  <div class="play-option start-container" id="playerName" style="display: none;">
+    <h1 class="start-text"> Introduce your name </h1>
+    <div class="flex" style="flex-direction: column; margin-top: 20px;">
+      <div class="get-player-name-title"> Player one: </div>
+      <input type="text" id="player-one-input">
+      <div class="get-player-name-title"> Player two:</div>
+      <input type="text" id="player-two-input">
+      <button id="press-to-play" class="start-button flicker"> Press to play </button>
     </div>
-    <div class="play-option start-container" style="display: none;">
-        <h1 class="start-text"> Select an opponent: </h1>
-        <div class="flex">
-            <div id="robot" class="option">
-                <span class="fas fa-robot"></span>
-                <p> Robot </p>
-            </div>       
-            <div id="human" class="option">
-                <span class="fas fa-user"></span>
-                <p> Human </p>
-            </div>
-        </div>
+  </div>
+  <div class="board-container" style="display:none">
+    <div class="flex">
+      <p class="start-text bloq" id="player-one">Player One: X </p>
+      <p class="start-text bloq" id="player-two">Player Two: O </p>
     </div>
-    <div class="board-container" style="display:none">
-        <div class="flex">
-            <p class="start-text bloq">Player One: X </p>
-            <p class="start-text bloq">Player Two: O </p>
-        </div>
-        <div class="board">
-            <div id="1" class="play"></div>   
-            <div id="2" class="play"></div> 
-            <div id="3" class="play"></div> 
-            <div id="4" class="play"></div> 
-            <div id="5" class="play"></div> 
-            <div id="6" class="play"></div> 
-            <div id="7" class="play"></div> 
-            <div id="8" class="play"></div>
-            <div id="9" class="play"></div>
-        </div>
+    <div class="board">
+      <div id="1" class="play"></div>
+      <div id="2" class="play"></div>
+      <div id="3" class="play"></div>
+      <div id="4" class="play"></div>
+      <div id="5" class="play"></div>
+      <div id="6" class="play"></div>
+      <div id="7" class="play"></div>
+      <div id="8" class="play"></div>
+      <div id="9" class="play"></div>
     </div>
-    <div class="winner-container" style="display: none;">
-        <div class="modal-content">
-            <h1 class="start-text"> CONGRATULATIONS </h1>
-            <p id="winner" class="start-text">  </p>
-            <button id="press-to-restart" class="start-button flicker restart"> Press to start </button>
-        </div>
+  </div>
+  <div class="winner-container" style="display: none;">
+    <div class="modal-content">
+      <h1 class="start-text"> CONGRATULATIONS </h1>
+      <p id="winner" class="start-text"> </p>
+      <p class="start-text" style="margin-top: 20px;"> You are the winner </p>
+      <button id="press-to-restart" class="restart flicker"> Press to restart </button>
     </div>
-    <!-- Javascript -->
-   <script src="main.js"></script> 
+  </div>
+  <!-- Javascript -->
+  <script src="main.js"></script>
 </body>
+
 </html>
