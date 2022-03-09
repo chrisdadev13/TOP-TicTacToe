@@ -156,9 +156,14 @@ class Main{
     }
   }
 
-  static tie(arr){
-    if(winner == false && arr.every(elem => elem == "X" || "O")){
-      alert("We have a tie");
+  static tie(arr, win){
+    if(win == false && (arr.every(elem => elem == "X" || elem == "O"))){
+     let modal = document.querySelector(".tie-container");
+      modal.style.display = "";
+      Main.restartGame();
+    }
+    else if(win == true && (arr.every(elem => elem == "X" || elem == "O"))){
+      console.log("Continue");
     }
   }
 
@@ -192,7 +197,7 @@ class Main{
           Main.secondDiagonal(boardArr);
           Main.rowWinner(boardArr);
           Main.columnWinner(boardArr);
-          Main.tie(boardArr);
+          Main.tie(boardArr, winner);
         }
       })
     })

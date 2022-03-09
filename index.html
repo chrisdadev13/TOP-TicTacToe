@@ -45,12 +45,19 @@
   </div>
   <div class="winner-container" style="display: none;">
     <div class="modal-content">
-      <h1 class="start-text"> CONGRATULATIONS </h1>
+      <h1 id="result-tie" class="start-text"> CONGRATULATIONS </h1>
       <p id="winner" class="start-text"> </p>
-      <p class="start-text" style="margin-top: 20px;"> You are the winner </p>
+      <p id="set-tie" class="start-text" style="margin-top: 20px;"> You are the winner </p>
       <button id="press-to-restart" class="restart flicker"> Press to restart </button>
     </div>
   </div>
+    <div class="winner-container tie-container" style="display: none;">
+      <div class="modal-content">
+        <hi class="start-text"> No one wins!!</hi>
+        <p class="start-text"> We have a tie</p>
+        <button id="press-to-restart" class="restart flicker"> Press to restart</button>
+      </div>
+    </div>
   <!-- Javascript -->
   <script src="main.js"></script>
 </body>
